@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "name": "ajith",
+      "id": "1",
+      "email": "ajith02@gmail.com",
+      "phone": "8220121707"
+    },
+    {
+      "id": "2",
+      "name": "yashwanth",
+      "email": "yash07@gmail.com",
+      "phone": 1234567890
+    },
+    {
+      "name": "sabitha",
+      "id": "3",
+      "email": "sabitha02@gmail.com",
+      "phone": "6385424776"
+    },
+    {
+      "name": "kathiresh",
+      "id": "4",
+      "email": "kathiresh02@gmail.com",
+      "phone": "6385424773"
+    },
+    {
+      "name": "anusree",
+      "id": "5",
+      "email": "anusree02@gmail.com",
+      "phone": "9788446919"
+    }
+  ]
+}

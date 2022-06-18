@@ -1,0 +1,43 @@
+<div class="container mt-2">
+    <div class="row">
+       
+        <div class="col-12">
+<div class="card m-5 p-5">
+    <h1 class="text-center text-capitalize">Add Customer Page</h1>
+    <form action=""[formGroup]="loginform" (ngSubmit)=" Savecustomer()" #myform="ngForm">
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" placeholder="Enter your id" class="form-control" id="id"formControlName="id">
+            <span class="text-danger"*ngIf="vid && vid.errors?.['required'] && myform.submitted">id is required</span>
+            
+        </div>
+        <div class="form-group">
+            <label for="name">Name:<span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter your name " class="form-control" id="name"formControlName="name">
+            <span class="text-danger" *ngIf="vname&&  myform.submitted && vname.errors?.['required']">name is invalid</span>
+            <span class="text-danger" *ngIf="vname && vname.errors?.['minlength'] && myform.submitted">pls enter atleast 5 character</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:<span class="text-danger">*</span></label>
+            <input type="email" placeholder="Enter your email" class="form-control" id="email" formControlName="email">
+            <span class="text-danger" *ngIf="vemail && vemail.errors?.['required'] && myform.submitted">email is invalid</span>
+            <span class="text-danger" *ngIf="vemail && vemail.errors?.['pattern'] && myform.submitted">pls enter valid email id (abc2@gmail.com) </span> 
+        </div>
+        <div class="form-group">
+            <label for="phone">phone:</label>
+            <input type="tel" placeholder="Enter your phone no" class="form-control" id="phone" formControlName="phone">
+            <span class="text-danger" *ngIf="vpho  && vpho.errors?.['required'] && myform.submitted">phone is invalid</span>
+            <span class="text-danger" *ngIf="vpho && vpho.errors?.['pattern'] && myform.submitted">Please, Enter 10 digit Mobile Number</span>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="" id="agreement" class="form-check-input">
+            <label for="agreement" class="form-check-label">Accept Terms & Conditions</label>
+        </div>
+        <button class="btn btn-primary form-control" type="submit">submit</button>  
+    </form>
+    
+</div>
+
+        </div>
+       
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 m-5">
+            <div class="card p-4">
+                <form action="" [formGroup]="registerform" #register="ngForm" (ngSubmit)="submit()">
+                    <h1 class="text-center text-capitalize">Register page</h1>
+                    <div class="form-group">
+                        <label for="name">Name <span class="text-danger">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="enter your name" class="form-control" formControlName="name">
+                        <span class="text-danger" *ngIf="vname && vname.invalid && register.submitted && vname.errors?.['required']">name is invalid</span>
+                        <span class="text-danger" *ngIf="vname && register.submitted && vname.errors?.['minlength']">pls enter atleast 5 character</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="text-danger">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="enter your email" class="form-control" formControlName="email">
+                        <span class="text-danger" *ngIf="vemail && vemail.invalid && register.submitted && vemail.errors?.['required']">email is invalid</span>
+                        <span class="text-danger" *ngIf="vemail && vemail.errors?.['pattern'] && register.submitted">pls enter valid email id</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password <span class="text-danger">*</span></label>
+                        <input type="password" name="password" id="password" placeholder="enter your password" class="form-control" formControlName="password">
+                        <span class="text-danger" *ngIf="vpass && vpass.invalid && register.submitted && vpass.errors?.['required']">password is invalid</span>
+                        <span class="text-danger" *ngIf="vpass && vpass.invalid && register.submitted && vpass.errors?.['pattern']">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">phone <span class="text-danger">*</span></label>
+                        <input type="tel" name="phone" id="phone" placeholder="enter your phone" class="form-control" formControlName="phone">
+                        <span class="text-danger" *ngIf="vpho && vpho.invalid && vpho.errors?.['required'] && register.submitted">phone no is invalid</span>
+                        <span class="text-danger" *ngIf="vpho && vpho.errors?.['pattern'] && register.submitted">pls enter 10 digits mobile number</span>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                      </div>
+
+                      <button mat-raised-button color="primary" type="submit" (click)="onRegister()">Submit</button>
+                      <button mat-raised-button color="accent" class="m-1" type="reset">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-4"></div>
+
+    </div>
+</div>

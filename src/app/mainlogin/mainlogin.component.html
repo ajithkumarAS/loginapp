@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+            
+        </div>
+        <div class="col-4 mt-5">
+            
+            <div class="card p-4"> 
+                <form action=""[formGroup]="loginform" #login="ngForm" (ngSubmit)="onLogin()">
+                    <h1 class="text-center">login Page</h1>
+                    <div class="form-group">
+                        <label for="email">Email <span class="text-danger">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="enter your email" class="form-control" formControlName="email">
+                        <span class="text-danger" *ngIf="vemail && vemail.invalid && login.submitted && vemail.errors?.['required']">email is invalid</span>
+                        <span class="text-danger" *ngIf="vemail && vemail.errors?.['pattern'] && login.submitted">pls enter valid email id</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password <span class="text-danger">*</span></label>
+                        <input type="password" name="password" id="password" placeholder="enter your password" class="form-control" formControlName="password">
+                        <span class="text-danger" *ngIf="vpass && vpass.invalid && login.submitted && vpass.errors?.['required']">password is invalid</span>
+                        <span class="text-danger" *ngIf="vpass && vpass.invalid && login.submitted && vpass.errors?.['pattern']">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
+                    </div>
+                    <button mat-raised-button color="primary" class="m-2" type="submit">Submit</button>
+                    <button mat-raised-button color="primary" class="m-2" type="reset">Cancel</button>
+                    <!--<button mat-raised-button color="accent" class="form-control mt-2" type="submit" (click)="OnLogin()">Submit<span class="material-icons">arrow_right</span></button>-->
+                  <h4>Don't have an account?<a href="" routerLink="/mainreg" class="">Register Here</a> </h4>
+                </form>
+              <!--- <button class="form-control text-center btn-primary"><i class="fa fa-twitter p-1" aria-hidden="true"></i>sign in with twitter</button>
+               <button class="form-control text-center mt-2" mat-raised-button color="warn"><i class="fa fa-facebook-square p-1" aria-hidden="true"></i>sign in with facebook </button>
+              --> </div>
+        </div>
+        <div class="col-4"></div>
+
+    </div>
+</div>

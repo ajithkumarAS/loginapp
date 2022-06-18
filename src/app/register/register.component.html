@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-md-6">
+            <div class="card p-3">
+                <form action=""[formGroup]="registerform" #myreg="ngForm" (ngSubmit)="Submit()">
+                    <div class="form-group">
+                        <label for="name">name<span class="text-danger">*</span></label>
+                        <input type="text" placeholder="enter your name" class="form-control" id="name" formControlName="name">
+                        <span class="text-danger" *ngIf="vname && myreg.submitted && vname.errors?.['required']">name is invalid</span>
+                        <span class="text-danger" *ngIf="vname && myreg.submitted && vname.errors?.['minlength']">pls enter atleast 5 character</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="sur">Surname</label>
+                        <input type="text" placeholder="enter your surname" class="form-control" id="sur" formControlName="sur">
+                        <span class="text-danger" *ngIf="vsur && myreg.submitted && vsur.errors?.['required']">surname is invalid</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="text-danger">*</span></label>
+                        <input type="email" placeholder="enter your email" class="form-control" id="email" formControlName="email">
+                        <span class="text-danger" *ngIf="vemail && myreg.submitted && vemail.errors?.['required']">email is invalid</span>
+                        <span class="text-danger" *ngIf="vemail && myreg.submitted && vemail.errors?.['pattern']">pls enter valid email address</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="text-danger">*</span></label>
+                        <input type="tel" placeholder="enter your phone" class="form-control" id="phone" formControlName="phone">
+                        <span class="text-danger" *ngIf="vpho && myreg.submitted && vpho.errors?.['required']">email is invalid</span>
+                        <span class="text-danger" *ngIf="vpho && myreg.submitted && vpho.errors?.['pattern']">pls enter 10 digit mobile number</span>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" class="form-control" placeholder="enter your age" formControlName="age">
+                        <span class="text-danger" *ngIf="vage && myreg.submitted && vage.errors?.['required']">age is invalid</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">DOB</label>
+                        <input type="date" name="dob" id="dob" class="form-control" formControlName="dob">
+                        <span class="text-danger" *ngIf="vdob && myreg.submitted && vdob.errors?.['required']">date of birth is invalid</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password <span class="text-danger">*</span></label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="enter your password" formControlName="password">
+                        <span class="text-danger" *ngIf="vpass && myreg.submitted && vpass.errors?.['required']">password is invalid</span>
+                        <span class="text-danger"*ngIf="vpass && vpass.errors?.['pattern'] && myreg.submitted">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" class="form-control" placeholder="enter your address" formControlName="address">
+                        <span class="text-danger" *ngIf="vadd && myreg.submitted && vadd.errors?.['required']">address is invalid</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select name="country" id="country" class="form-control"[(ngModel)]="selectedCountry.id" (change)="onSelect($event.target)">
+                            <option value="0">--select country--</option>
+                            <option value={{country.id}} *ngFor="let countries of country">{{countries.name}}</option>
+                          
+                        </select>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select name="state" id="state" class="form-control">
+                            <option value="0">--select state--</option>
+                            <option value={{state.id}} *ngFor="let states of state">{{states.name}}</option>
+                            
+                        </select>
+                        
+                    </div>
+                    
+                    <button class="btn btn-primary form-control" type="submit">Submit</button>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

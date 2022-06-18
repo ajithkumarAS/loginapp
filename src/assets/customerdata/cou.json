@@ -1,0 +1,143 @@
+{
+    "country": [
+      { "id": 1, "name": "Afghanistan" },
+      { "id": 2, "name": "Bangladesh" },
+      { "id": 3, "name": "china"},
+      { "id": 4, "name": "France" },
+      { "id": 5, "name": "india" }
+    ],
+    "states":[
+      {
+        "id":1,
+        "name":"Province",
+        "country_id":1
+      },
+      {
+        "id":2,
+        "name":"Faryab",
+        "country_id":1
+      },
+      {
+        "id":3,
+        "name":"Ghazni",
+        "country_id":1
+      },
+      {
+        "id":4,
+        "name":"Ghor",
+        "country_id":1
+      },
+      {
+        "id":5,
+        "name":"Helmand",
+        "country_id":1
+      },
+      {
+        "id":1,
+        "name":"Barisal",
+        "country_id":2
+      },
+      {
+        "id":2,
+        "name":"Chittagong",
+        "country_id":2
+      },
+      {
+        "id":3,
+        "name":"Dhaka",
+        "country_id":2
+      },
+      {
+        "id":4,
+        "name":"Khulna",
+        "country_id":2
+      },
+      {
+        "id":5,
+        "name":"Rajshahi ",
+        "country_id":2
+      },
+      {
+        "id":1,
+        "name":"Anhui ",
+        "country_id":3
+      },
+      {
+        "id":2,
+        "name":"Fujian  ",
+        "country_id":3
+      },
+      {
+        "id":3,
+        "name":" Gansu",
+        "country_id":3
+      },
+      {
+        "id":4,
+        "name":"Guangdong ",
+        "country_id":3
+      },
+      {
+        "id":5,
+        "name":"Hainan ",
+        "country_id":3
+      },
+      {
+        "id":1,
+        "name":" amapa",
+        "country_id":4
+      },
+      {
+        "id":2,
+        "name":"alsace ",
+        "country_id":4
+      },
+      
+      {
+        "id":3,
+        "name":"centre ",
+        "country_id":4
+      },
+      
+      {
+        "id":4,
+        "name":"corse ",
+        "country_id":4
+      },
+      
+      {
+        "id":5,
+        "name":"guinaa ",
+        "country_id":4
+      },
+       {
+        "id":1,
+        "name":"punjab",
+        "country_id":5
+      } ,
+      {
+        "id":2,
+        "name":"andra pradesh",
+        "country_id":5
+      },
+      {
+        "id":3,
+        "name":"uttra pradesh",
+        "country_id":5
+      },
+      {
+        "id":4,
+        "name":"goa",
+        "country_id":5
+      },
+      {
+        "id":5,
+        "name":"tamilnadu",
+        "country_id":5
+      }
+      
+      
+      
+      
+    ]
+}

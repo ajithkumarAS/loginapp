@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-toolbar color="primary">
+        <div class="button">
+        <button mat-raised-button class="m-2" routerLink="home">Home</button>
+        <button mat-raised-button class="m-2" routerLink="customer">Customer</button>
+        <button mat-raised-button class="m-2" (click)="signout()">Logout</button>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</div>

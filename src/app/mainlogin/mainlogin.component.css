@@ -1,0 +1,17 @@
+
+h1{
+    font-weight: 900;
+}
+h2
+{
+    font-weight: bolder;
+}
+.card
+{
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+button{
+    border-radius: 50px;
+}

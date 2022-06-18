@@ -1,0 +1,10 @@
+.card
+{
+    background-color: aquamarine;
+}
+.container
+{
+    background-image: url("../../assets/images/man1.jpg");
+    display: flex;
+    justify-content: center;
+}
